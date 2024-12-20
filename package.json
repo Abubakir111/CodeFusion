@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
+    "axios": "^1.7.9",
     "miragejs": "^0.1.48",
     "monaco-editor": "^0.52.2",
     "react": "^18.3.1",

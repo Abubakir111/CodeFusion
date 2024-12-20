@@ -3,25 +3,19 @@
   margin: 0px;
   padding: 0px;
 }
-
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  ---boredre: #213040;
-  ---color: #93a3bc;
-  ---colorhover: #bae8f6;
-  ---background: #15222e;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --border: 1px solid rgb(134, 123, 123);
+  --color: #93a3bc;
+  --colorhover: #bae8f6;
+  --background: #15222e;
+  --fontSize: 16px;
+  --padding: 12px 24px;
+  --borderRadius: 10px;
+  --bgFon: #111b25;
+  --fontFamily: Arial, sans-serif;
+  --buttonRadius: 5px;
+  --selectRadius: 5px;
 }
-
 a {
   font-weight: 500;
   color: #646cff;
@@ -30,45 +24,46 @@ a {
 a:hover {
   color: #535bf2;
 }
-
 body {
   width: 100%;
   height: max-content;
+  min-height: 100vh;
+  background: var(--background);
+  font-family: var(--fontFamily);
 }
-
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: var(--background);
+}
 h1 {
-  font-size: 3.2em;
+  font-size: clamp(24px, 3vw, 51px);
   line-height: 1.1;
 }
-
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  display: inline-block;
+  padding: 8px 22px;
+  font-size: 20px;
+  font-family: var(--fontFamily);
+  font-weight: bold;
+  color: #fff;
+  background: #203f48;
+  border: 2px solid #34e7e4;
+  border-radius: var(--buttonRadius);
+  box-shadow: 0 0 10px rgba(52, 231, 228, 0.5), 0 0 30px rgba(52, 231, 228, 0.2);
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 button:hover {
-  border-color: #646cff;
+  box-shadow: 0 0 20px #34e7e4, 0 0 50px rgba(52, 231, 228, 0.4);
+  transform: translateY(-3px);
+}
+button:active {
+  box-shadow: inset 0 0 10px #111b25;
+  transform: translateY(2px);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

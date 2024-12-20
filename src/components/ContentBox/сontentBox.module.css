@@ -1,0 +1,14 @@
+.container {
+  width: max-content;
+  background: var(--bgFon);
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: var(--borderRadius) var(--borderRadius) 0px 0px;
+  border: 1px solid gray;
+}
+.dynamicClassBorderRadius {
+  border-radius: 10px 10px 0px 0px;
+}

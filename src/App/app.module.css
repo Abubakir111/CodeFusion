@@ -1,0 +1,93 @@
+.app_container {
+  font-family: var(--fontFamily);
+  background-color: var(--background);
+  color: var(--color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.statusErorr {
+  background: #ff4d4d;
+  padding: 5px;
+  color: white;
+}
+.logo_container {
+  width: 100%;
+}
+.logo {
+  width: 100px;
+  height: 70px;
+  display: block;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+.border {
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 0px 0px var(--borderRadius);
+  border: var(--border);
+  background: var(--background);
+  background: var(--bgFon);
+  -webkit-border: 1px solid gainsboro;
+}
+.editor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.container_output {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .title {
+    width: max-content;
+    height: max-content;
+    padding: 12px 24px;
+    font-size: var(--fontSize);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+}
+.result {
+  font-family: var(--fontFamily);
+}
+.logoCode {
+  width: 40px;
+}
+.output {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px var(--borderRadius) var(--borderRadius) 0px;
+  border: var(--border);
+  padding: 10px;
+}
+@media screen and (max-width: 1000px) {
+  .logo {
+    width: 90px;
+    height: 60px;
+  }
+  .container {
+    flex-direction: column;
+    row-gap: 20px;
+    height: max-content;
+  }
+  .border {
+    height: 400px;
+    border-radius: 0px var(--borderRadius) var(--borderRadius);
+  }
+  .output {
+    width: 100%;
+    min-height: inherit;
+    height: 400px;
+    border-radius: 0px var(--borderRadius) var(--borderRadius);
+  }
+}
