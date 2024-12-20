@@ -1,13 +1,15 @@
 import axios from 'axios';
 
 const urlLocalNode = 'http://localhost:5000/execute-js';
+const URLPython = 'https://dockerpythonexecutor-production.up.railway.app/';
+const URLNode = 'https://dockerjavascriptexecutor-production.up.railway.app/';
 
 const Server = async ({ language, code }) => {
   console.log(code);
-
+  const url = language === 'python' ? URLPython : URLNode;
   try {
     // Отправляем данные на сервер
-    const response = await axios.post(urlLocalNode, {
+    const response = await axios.post(url, {
       code: code // Код, введённый в редактор (из state `code`)
     });
 
